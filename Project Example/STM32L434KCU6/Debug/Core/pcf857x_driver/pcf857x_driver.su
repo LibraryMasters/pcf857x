@@ -1,0 +1,17 @@
+../Core/pcf857x_driver/pcf857x_driver.c:57:9:a_pcf857x_i2c_write	8	static
+../Core/pcf857x_driver/pcf857x_driver.c:78:9:a_pcf857x_i2c_read	8	static
+../Core/pcf857x_driver/pcf857x_driver.c:94:6:a_pcf857x_print_error_msg	0	static
+../Core/pcf857x_driver/pcf857x_driver.c:111:9:pcf857x_init	16	static
+../Core/pcf857x_driver/pcf857x_driver.c:174:9:pcf857x_deinit	16	static
+../Core/pcf857x_driver/pcf857x_driver.c:200:9:pcf857x_set_addr_pin	0	static
+../Core/pcf857x_driver/pcf857x_driver.c:230:9:pcf857x_get_addr_pin	0	static
+../Core/pcf857x_driver/pcf857x_driver.c:259:9:pcf857x_set_variant	8	static
+../Core/pcf857x_driver/pcf857x_driver.c:291:9:pcf857x_get_variant	0	static
+../Core/pcf857x_driver/pcf857x_driver.c:320:9:pcf857x_pin_write	32	static
+../Core/pcf857x_driver/pcf857x_driver.c:450:9:pcf857x_pin_write_all	24	static
+../Core/pcf857x_driver/pcf857x_driver.c:515:9:pcf857x_pin_read	32	static
+../Core/pcf857x_driver/pcf857x_driver.c:614:9:pcf857x_pin_read_all	24	static
+../Core/pcf857x_driver/pcf857x_driver.c:686:9:pcf857x_pin_toggle	24	static
+../Core/pcf857x_driver/pcf857x_driver.c:724:9:pcf857x_set_reg	8	static
+../Core/pcf857x_driver/pcf857x_driver.c:754:9:pcf857x_get_reg	8	static
+../Core/pcf857x_driver/pcf857x_driver.c:779:9:pcf857x_info	8	static

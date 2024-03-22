@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1702227777 source:e:\library master\pcf857x io expander\pcf857x_io_expander_driver\main.c
+	"pcf857x_driver_basic.h"
+
+1701889120 e:\library master\pcf857x io expander\pcf857x_io_expander_driver\pcf857x_driver_basic.h
+	"pcf857x_driver_interface.h"
+
+1706689227 e:\library master\pcf857x io expander\pcf857x_io_expander_driver\pcf857x_driver_interface.h
+	"pcf857x_driver.h"
+
+1706689556 e:\library master\pcf857x io expander\pcf857x_io_expander_driver\pcf857x_driver.h
+	<stdio.h>
+	<stdint.h>
+	<stdbool.h>
+	<stdlib.h>
+	<string.h>
+	<stdarg.h>
+
+1706689556 source:e:\library master\pcf857x io expander\pcf857x_io_expander_driver\pcf857x_driver.c
+	"pcf857x_driver.h"
+
+1702136280 source:e:\library master\pcf857x io expander\pcf857x_io_expander_driver\pcf857x_driver_basic.c
+	"pcf857x_driver_basic.h"
+
+1706689567 source:e:\library master\pcf857x io expander\pcf857x_io_expander_driver\pcf857x_driver_interface.c
+	"pcf857x_driver_interface.h"
+

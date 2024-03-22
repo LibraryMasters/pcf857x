@@ -1,0 +1,1769 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[v F740 `(uc ~T0 @X0 0 tf ]
+[v F742 `(uc ~T0 @X0 0 tf ]
+[v F744 `(uc ~T0 @X0 0 tf4`uc`us`*uc`uc ]
+[v F750 `(uc ~T0 @X0 0 tf4`uc`us`*uc`uc ]
+[v F756 `(v ~T0 @X0 0 tf1`ul ]
+[v F759 `(v ~T0 @X0 0 tv`*uc ]
+[v F762 `(v ~T0 @X0 0 tf2`uc`uc ]
+"184 ./pcf857x_driver.h
+[; ;./pcf857x_driver.h: 184: {
+[s S9 `uc -> 25 `i `uc -> 25 `i `uc -> 8 `i `f 1 `f 1 `f 1 `f 1 `f 1 `uc 1 `uc 1 `f 1 ]
+[n S9 pcf857x_info_s chip_name manufacturer_name interface supply_voltage_min_v supply_voltage_max_v max_current_ma temperature_min temperature_max flash_size_min ram_size_min driver_version ]
+"202
+[; ;./pcf857x_driver.h: 202: {
+[s S10 `*F740 1 `*F742 1 `*F744 1 `*F750 1 `*F756 1 `*F759 1 `*F762 1 `S9 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S10 pcf857x_handle_s i2c_init i2c_deinit i2c_read i2c_write delay_ms debug_print receive_callback info i2c_address device_variant gpio_pin_count inited ]
+[v F851 `*S10 ~T0 @X0 1 t ]
+"59 pcf857x_driver.c
+[; ;pcf857x_driver.c: 59:     if(pHandle->i2c_write(pHandle->i2c_address, u8Reg, (uint8_t*)pBuf, u8Length) != PCF857X_DRV_OK)
+[c E676 0 1 2 3 .. ]
+[n E676 . PCF857X_DRV_OK PCF857X_DRV_FAILED PCF857X_DRV_ERR_HANDLER PCF857X_DRV_ERR_INIT  ]
+[v F863 `*S10 ~T0 @X0 1 t ]
+[v F875 `*S10 ~T0 @X0 1 t ]
+[v F876 `*uc ~T0 @X0 1 t ]
+[v F884 `*S10 ~T0 @X0 1 t ]
+[v F889 `(v ~T0 @X0 0 tv`*uc ]
+[v F892 `(uc ~T0 @X0 0 tf ]
+[v F900 `*S10 ~T0 @X0 1 t ]
+[v F905 `*S10 ~T0 @X0 1 t ]
+[v F909 `*S10 ~T0 @X0 1 t ]
+"233
+[; ;pcf857x_driver.c: 233: uint8_t pcf857x_set_addr_pin(pcf857x_handle_t *const pHandle, pcf857x_address_t addr_pin)
+[c E687 32 56 0 1 2 3 4 5 6 7 .. ]
+[n E687 . PCF857X_ADDRESS_DEFAULT PCF8574A_ADDRESS_DEFAULT PCF857X_ADDRESS_A000 PCF857X_ADDRESS_A001 PCF857X_ADDRESS_A010 PCF857X_ADDRESS_A011 PCF857X_ADDRESS_A100 PCF857X_ADDRESS_A101 PCF857X_ADDRESS_A110 PCF857X_ADDRESS_A111  ]
+"242
+[; ;pcf857x_driver.c: 242:     if(pHandle->device_variant == PCF8574A_VARIANT)
+[c E682 0 1 2 .. ]
+[n E682 . PCF8574_VARIANT PCF8574A_VARIANT PCF8575_VARIANT  ]
+[v F915 `*S10 ~T0 @X0 1 t ]
+[v F921 `*S10 ~T0 @X0 1 t ]
+[v F926 `*S10 ~T0 @X0 1 t ]
+[v F931 `*S10 ~T0 @X0 1 t ]
+"353
+[; ;pcf857x_driver.c: 353: uint8_t pcf857x_pin_write(pcf857x_handle_t *const pHandle, pcf857x_gpio_port_t pin, pcf857x_port_logic_level_t logic_level)
+[c E703 0 1 2 3 4 5 6 7 10 11 12 13 14 15 16 17 .. ]
+[n E703 . PCF857X_GPIO_PIN_0 PCF857X_GPIO_PIN_1 PCF857X_GPIO_PIN_2 PCF857X_GPIO_PIN_3 PCF857X_GPIO_PIN_4 PCF857X_GPIO_PIN_5 PCF857X_GPIO_PIN_6 PCF857X_GPIO_PIN_7 PCF857X_GPIO_PIN_10 PCF857X_GPIO_PIN_11 PCF857X_GPIO_PIN_12 PCF857X_GPIO_PIN_13 PCF857X_GPIO_PIN_14 PCF857X_GPIO_PIN_15 PCF857X_GPIO_PIN_16 PCF857X_GPIO_PIN_17  ]
+[c E721 0 1 .. ]
+[n E721 . PCF857X_GPIO_LOW PCF857X_GPIO_HIGH  ]
+"29 C:\Program Files\Microchip\xc8\v2.36\pic\include\c99\string.h
+[; ;C:\Program Files\Microchip\xc8\v2.36\pic\include\c99\string.h: 29: void *memset (void *, int, size_t);
+[v _memset `(*v ~T0 @X0 0 ef3`*v`i`ui ]
+[v F939 `*S10 ~T0 @X0 1 t ]
+[v F945 `*S10 ~T0 @X0 1 t ]
+[v F953 `*S10 ~T0 @X0 1 t ]
+[v F960 `*S10 ~T0 @X0 1 t ]
+[v F967 `*S10 ~T0 @X0 1 t ]
+[v F974 `*S10 ~T0 @X0 1 t ]
+"34
+[; ;C:\Program Files\Microchip\xc8\v2.36\pic\include\c99\string.h: 34: char *strncpy (char *restrict, const char *restrict, size_t);
+[v _strncpy `(*uc ~T0 @X0 0 ef3`*uc`*Cuc`ui ]
+"80 ./pcf857x_driver.h
+[; ;./pcf857x_driver.h: 80:  static uint8_t err;
+[v _err `uc ~T0 @X0 1 s ]
+"82
+[; ;./pcf857x_driver.h: 82:  static uint16_t pcf857x_pin_mask_arr[0x10] = { 0x01,
+[v _pcf857x_pin_mask_arr `us ~T0 @X0 -> 16 `i s ]
+[i _pcf857x_pin_mask_arr
+:U ..
+-> -> 1 `i `us
+-> -> 2 `i `us
+-> -> 4 `i `us
+-> -> 8 `i `us
+-> -> 16 `i `us
+-> -> 32 `i `us
+-> -> 64 `i `us
+-> -> 128 `i `us
+-> -> 256 `i `us
+-> -> 512 `i `us
+-> -> 1024 `i `us
+-> -> 2048 `i `us
+-> -> 4096 `i `us
+-> -> 8192 `i `us
+-> -> 16384 `i `us
+-> -> 32768 `ui `us
+..
+]
+"57 pcf857x_driver.c
+[; ;pcf857x_driver.c: 57: uint8_t a_pcf857x_i2c_write(pcf857x_handle_t *const pHandle, uint8_t u8Reg, uint8_t *pBuf, uint8_t u8Length)
+[v _a_pcf857x_i2c_write `(uc ~T0 @X0 1 ef4`C*S10`uc`*uc`uc ]
+"58
+[; ;pcf857x_driver.c: 58: {
+{
+[e :U _a_pcf857x_i2c_write ]
+[v F853 `*S10 ~T0 @X0 1 t ]
+"57
+[; ;pcf857x_driver.c: 57: uint8_t a_pcf857x_i2c_write(pcf857x_handle_t *const pHandle, uint8_t u8Reg, uint8_t *pBuf, uint8_t u8Length)
+[v _pHandle `C*S10 ~T0 @X0 1 r1 ]
+[v _u8Reg `uc ~T0 @X0 1 r2 ]
+[v _pBuf `*uc ~T0 @X0 1 r3 ]
+[v _u8Length `uc ~T0 @X0 1 r4 ]
+"58
+[; ;pcf857x_driver.c: 58: {
+[f ]
+"59
+[; ;pcf857x_driver.c: 59:     if(pHandle->i2c_write(pHandle->i2c_address, u8Reg, (uint8_t*)pBuf, u8Length) != PCF857X_DRV_OK)
+[e $ ! != -> ( *U . *U _pHandle 3 (4 , , , . *U _pHandle 8 -> _u8Reg `us _pBuf _u8Length `i -> . `E676 0 `i 12  ]
+"60
+[; ;pcf857x_driver.c: 60:     {
+{
+"61
+[; ;pcf857x_driver.c: 61:         return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 11  ]
+"62
+[; ;pcf857x_driver.c: 62:     }
+}
+[e :U 12 ]
+"63
+[; ;pcf857x_driver.c: 63:     return 0;
+[e ) -> -> 0 `i `uc ]
+[e $UE 11  ]
+"64
+[; ;pcf857x_driver.c: 64: }
+[e :UE 11 ]
+}
+"78
+[; ;pcf857x_driver.c: 78: uint8_t a_pcf857x_i2c_read(pcf857x_handle_t *const pHandle, uint16_t u8Reg, uint8_t *pBuf, uint8_t u8Length)
+[v _a_pcf857x_i2c_read `(uc ~T0 @X0 1 ef4`C*S10`us`*uc`uc ]
+"79
+[; ;pcf857x_driver.c: 79: {
+{
+[e :U _a_pcf857x_i2c_read ]
+[v F865 `*S10 ~T0 @X0 1 t ]
+"78
+[; ;pcf857x_driver.c: 78: uint8_t a_pcf857x_i2c_read(pcf857x_handle_t *const pHandle, uint16_t u8Reg, uint8_t *pBuf, uint8_t u8Length)
+[v _pHandle `C*S10 ~T0 @X0 1 r1 ]
+[v _u8Reg `us ~T0 @X0 1 r2 ]
+[v _pBuf `*uc ~T0 @X0 1 r3 ]
+[v _u8Length `uc ~T0 @X0 1 r4 ]
+"79
+[; ;pcf857x_driver.c: 79: {
+[f ]
+"80
+[; ;pcf857x_driver.c: 80:     if(pHandle->i2c_read(pHandle->i2c_address, u8Reg, (uint8_t*)pBuf, u8Length) != PCF857X_DRV_OK)
+[e $ ! != -> ( *U . *U _pHandle 2 (4 , , , . *U _pHandle 8 _u8Reg _pBuf _u8Length `i -> . `E676 0 `i 14  ]
+"81
+[; ;pcf857x_driver.c: 81:     {
+{
+"82
+[; ;pcf857x_driver.c: 82:         return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 13  ]
+"83
+[; ;pcf857x_driver.c: 83:     }
+}
+[e :U 14 ]
+"84
+[; ;pcf857x_driver.c: 84:     return 0;
+[e ) -> -> 0 `i `uc ]
+[e $UE 13  ]
+"85
+[; ;pcf857x_driver.c: 85: }
+[e :UE 13 ]
+}
+"94
+[; ;pcf857x_driver.c: 94: void a_pcf857x_print_error_msg(pcf857x_handle_t *const pHandle, char *const pBuffer)
+[v _a_pcf857x_print_error_msg `(v ~T0 @X0 1 ef2`C*S10`C*uc ]
+"95
+[; ;pcf857x_driver.c: 95: {
+{
+[e :U _a_pcf857x_print_error_msg ]
+[v F878 `*S10 ~T0 @X0 1 t ]
+"94
+[; ;pcf857x_driver.c: 94: void a_pcf857x_print_error_msg(pcf857x_handle_t *const pHandle, char *const pBuffer)
+[v _pHandle `C*S10 ~T0 @X0 1 r1 ]
+[v F880 `*uc ~T0 @X0 1 t ]
+[v _pBuffer `C*uc ~T0 @X0 1 r2 ]
+"95
+[; ;pcf857x_driver.c: 95: {
+[f ]
+"97
+[; ;pcf857x_driver.c: 97:     pHandle->debug_print("PCF857X: failed to %s.\r\n", pBuffer);
+[e ( *U . *U _pHandle 5 , (. :s 1C _pBuffer ]
+"99
+[; ;pcf857x_driver.c: 99: }
+[e :UE 15 ]
+}
+"111
+[; ;pcf857x_driver.c: 111: uint8_t pcf857x_init(pcf857x_handle_t *const pHandle)
+[v _pcf857x_init `(uc ~T0 @X0 1 ef1`C*S10 ]
+"112
+[; ;pcf857x_driver.c: 112: {
+{
+[e :U _pcf857x_init ]
+[v F886 `*S10 ~T0 @X0 1 t ]
+"111
+[; ;pcf857x_driver.c: 111: uint8_t pcf857x_init(pcf857x_handle_t *const pHandle)
+[v _pHandle `C*S10 ~T0 @X0 1 r1 ]
+"112
+[; ;pcf857x_driver.c: 112: {
+[f ]
+"113
+[; ;pcf857x_driver.c: 113:     if (pHandle == ((void*)0))
+[e $ ! == _pHandle -> -> -> 0 `i `*v `*S10 17  ]
+"114
+[; ;pcf857x_driver.c: 114:         return 2;
+[e ) -> -> 2 `i `uc ]
+[e $UE 16  ]
+[e :U 17 ]
+"115
+[; ;pcf857x_driver.c: 115:     if (pHandle->debug_print == ((void*)0))
+[e $ ! == . *U _pHandle 5 -> -> -> 0 `i `*v `*F889 18  ]
+"116
+[; ;pcf857x_driver.c: 116:         return 3;
+[e ) -> -> 3 `i `uc ]
+[e $UE 16  ]
+[e :U 18 ]
+"117
+[; ;pcf857x_driver.c: 117:     if (pHandle->i2c_init == ((void*)0))
+[e $ ! == . *U _pHandle 0 -> -> -> 0 `i `*v `*F892 19  ]
+"118
+[; ;pcf857x_driver.c: 118:     {
+{
+"120
+[; ;pcf857x_driver.c: 120:         pHandle->debug_print("PCF857X: i2c initialize is null\n");
+[e ( *U . *U _pHandle 5 :s 2C ]
+"122
+[; ;pcf857x_driver.c: 122:         return 3;
+[e ) -> -> 3 `i `uc ]
+[e $UE 16  ]
+"123
+[; ;pcf857x_driver.c: 123:     }
+}
+[e :U 19 ]
+"158
+[; ;pcf857x_driver.c: 158:     if (pHandle->i2c_init())
+[e $ ! != -> ( *U . *U _pHandle 0 ..  `i -> 0 `i 20  ]
+"159
+[; ;pcf857x_driver.c: 159:     {
+{
+"161
+[; ;pcf857x_driver.c: 161:         pHandle->debug_print("PCF857X: i2c initialize failed\n");
+[e ( *U . *U _pHandle 5 :s 3C ]
+"163
+[; ;pcf857x_driver.c: 163:         return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 16  ]
+"164
+[; ;pcf857x_driver.c: 164:     }
+}
+[e :U 20 ]
+"166
+[; ;pcf857x_driver.c: 166:     pHandle->inited = 1;
+[e = . *U _pHandle 11 -> -> 1 `i `uc ]
+"168
+[; ;pcf857x_driver.c: 168:     return 0;
+[e ) -> -> 0 `i `uc ]
+[e $UE 16  ]
+"169
+[; ;pcf857x_driver.c: 169: }
+[e :UE 16 ]
+}
+"181
+[; ;pcf857x_driver.c: 181: uint8_t pcf857x_deinit(pcf857x_handle_t *const pHandle)
+[v _pcf857x_deinit `(uc ~T0 @X0 1 ef1`C*S10 ]
+"182
+[; ;pcf857x_driver.c: 182: {
+{
+[e :U _pcf857x_deinit ]
+[v F902 `*S10 ~T0 @X0 1 t ]
+"181
+[; ;pcf857x_driver.c: 181: uint8_t pcf857x_deinit(pcf857x_handle_t *const pHandle)
+[v _pHandle `C*S10 ~T0 @X0 1 r1 ]
+"182
+[; ;pcf857x_driver.c: 182: {
+[f ]
+"183
+[; ;pcf857x_driver.c: 183:     if(pHandle == ((void*)0))
+[e $ ! == _pHandle -> -> -> 0 `i `*v `*S10 22  ]
+"184
+[; ;pcf857x_driver.c: 184:         return 2;
+[e ) -> -> 2 `i `uc ]
+[e $UE 21  ]
+[e :U 22 ]
+"185
+[; ;pcf857x_driver.c: 185:     if(pHandle->inited != 1)
+[e $ ! != -> . *U _pHandle 11 `i -> 1 `i 23  ]
+"186
+[; ;pcf857x_driver.c: 186:         return 3;
+[e ) -> -> 3 `i `uc ]
+[e $UE 21  ]
+[e :U 23 ]
+"188
+[; ;pcf857x_driver.c: 188:     if(pHandle->i2c_deinit() != 0)
+[e $ ! != -> ( *U . *U _pHandle 1 ..  `i -> 0 `i 24  ]
+"189
+[; ;pcf857x_driver.c: 189:     {
+{
+"190
+[; ;pcf857x_driver.c: 190:         a_pcf857x_print_error_msg(pHandle, "de-initialize i2c");
+[e ( _a_pcf857x_print_error_msg (2 , _pHandle :s 4C ]
+"191
+[; ;pcf857x_driver.c: 191:         return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 21  ]
+"192
+[; ;pcf857x_driver.c: 192:     }
+}
+[e :U 24 ]
+"194
+[; ;pcf857x_driver.c: 194:     return 0;
+[e ) -> -> 0 `i `uc ]
+[e $UE 21  ]
+"195
+[; ;pcf857x_driver.c: 195: }
+[e :UE 21 ]
+}
+"207
+[; ;pcf857x_driver.c: 207: uint8_t pcf857x_irq_pHandler(pcf857x_handle_t *const pHandle)
+[v _pcf857x_irq_pHandler `(uc ~T0 @X0 1 ef1`C*S10 ]
+"208
+[; ;pcf857x_driver.c: 208: {
+{
+[e :U _pcf857x_irq_pHandler ]
+[v F907 `*S10 ~T0 @X0 1 t ]
+"207
+[; ;pcf857x_driver.c: 207: uint8_t pcf857x_irq_pHandler(pcf857x_handle_t *const pHandle)
+[v _pHandle `C*S10 ~T0 @X0 1 r1 ]
+"208
+[; ;pcf857x_driver.c: 208: {
+[f ]
+"209
+[; ;pcf857x_driver.c: 209:     if(pHandle == ((void*)0))
+[e $ ! == _pHandle -> -> -> 0 `i `*v `*S10 26  ]
+"210
+[; ;pcf857x_driver.c: 210:         return 2;
+[e ) -> -> 2 `i `uc ]
+[e $UE 25  ]
+[e :U 26 ]
+"211
+[; ;pcf857x_driver.c: 211:     if(pHandle->inited != 1)
+[e $ ! != -> . *U _pHandle 11 `i -> 1 `i 27  ]
+"212
+[; ;pcf857x_driver.c: 212:         return 3;
+[e ) -> -> 3 `i `uc ]
+[e $UE 25  ]
+[e :U 27 ]
+"214
+[; ;pcf857x_driver.c: 214:     if(err)
+[e $ ! != -> _err `i -> 0 `i 28  ]
+"215
+[; ;pcf857x_driver.c: 215:     {
+{
+"217
+[; ;pcf857x_driver.c: 217:         return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 25  ]
+"218
+[; ;pcf857x_driver.c: 218:     }
+}
+[e :U 28 ]
+"220
+[; ;pcf857x_driver.c: 220:     return 0;
+[e ) -> -> 0 `i `uc ]
+[e $UE 25  ]
+"221
+[; ;pcf857x_driver.c: 221: }
+[e :UE 25 ]
+}
+"233
+[; ;pcf857x_driver.c: 233: uint8_t pcf857x_set_addr_pin(pcf857x_handle_t *const pHandle, pcf857x_address_t addr_pin)
+[v _pcf857x_set_addr_pin `(uc ~T0 @X0 1 ef2`C*S10`E687 ]
+"234
+[; ;pcf857x_driver.c: 234: {
+{
+[e :U _pcf857x_set_addr_pin ]
+[v F911 `*S10 ~T0 @X0 1 t ]
+"233
+[; ;pcf857x_driver.c: 233: uint8_t pcf857x_set_addr_pin(pcf857x_handle_t *const pHandle, pcf857x_address_t addr_pin)
+[v _pHandle `C*S10 ~T0 @X0 1 r1 ]
+[v _addr_pin `E687 ~T0 @X0 1 r2 ]
+"234
+[; ;pcf857x_driver.c: 234: {
+[f ]
+"235
+[; ;pcf857x_driver.c: 235:     uint8_t default_address;
+[v _default_address `uc ~T0 @X0 1 a ]
+"237
+[; ;pcf857x_driver.c: 237:     if(pHandle == ((void*)0))
+[e $ ! == _pHandle -> -> -> 0 `i `*v `*S10 30  ]
+"238
+[; ;pcf857x_driver.c: 238:         return 2;
+[e ) -> -> 2 `i `uc ]
+[e $UE 29  ]
+[e :U 30 ]
+"239
+[; ;pcf857x_driver.c: 239:     if(pHandle->inited != 1)
+[e $ ! != -> . *U _pHandle 11 `i -> 1 `i 31  ]
+"240
+[; ;pcf857x_driver.c: 240:         return 3;
+[e ) -> -> 3 `i `uc ]
+[e $UE 29  ]
+[e :U 31 ]
+"242
+[; ;pcf857x_driver.c: 242:     if(pHandle->device_variant == PCF8574A_VARIANT)
+[e $ ! == -> . *U _pHandle 9 `i -> . `E682 1 `i 32  ]
+"243
+[; ;pcf857x_driver.c: 243:         default_address = PCF8574A_ADDRESS_DEFAULT;
+[e = _default_address -> . `E687 1 `uc ]
+[e $U 33  ]
+"244
+[; ;pcf857x_driver.c: 244:     else
+[e :U 32 ]
+"245
+[; ;pcf857x_driver.c: 245:         default_address = PCF857X_ADDRESS_DEFAULT;
+[e = _default_address -> . `E687 0 `uc ]
+[e :U 33 ]
+"247
+[; ;pcf857x_driver.c: 247:     pHandle->i2c_address = default_address;
+[e = . *U _pHandle 8 _default_address ]
+"248
+[; ;pcf857x_driver.c: 248:     pHandle->i2c_address |= (addr_pin);
+[e =| . *U _pHandle 8 -> _addr_pin `uc ]
+"250
+[; ;pcf857x_driver.c: 250:     return 0;
+[e ) -> -> 0 `i `uc ]
+[e $UE 29  ]
+"251
+[; ;pcf857x_driver.c: 251: }
+[e :UE 29 ]
+}
+"263
+[; ;pcf857x_driver.c: 263: uint8_t pcf857x_get_addr_pin(pcf857x_handle_t *const pHandle, pcf857x_address_t *pAddr_pin)
+[v _pcf857x_get_addr_pin `(uc ~T0 @X0 1 ef2`C*S10`*E687 ]
+"264
+[; ;pcf857x_driver.c: 264: {
+{
+[e :U _pcf857x_get_addr_pin ]
+[v F917 `*S10 ~T0 @X0 1 t ]
+"263
+[; ;pcf857x_driver.c: 263: uint8_t pcf857x_get_addr_pin(pcf857x_handle_t *const pHandle, pcf857x_address_t *pAddr_pin)
+[v _pHandle `C*S10 ~T0 @X0 1 r1 ]
+[v _pAddr_pin `*E687 ~T0 @X0 1 r2 ]
+"264
+[; ;pcf857x_driver.c: 264: {
+[f ]
+"265
+[; ;pcf857x_driver.c: 265:     uint8_t default_address;
+[v _default_address `uc ~T0 @X0 1 a ]
+"267
+[; ;pcf857x_driver.c: 267:     if (pHandle == ((void*)0))
+[e $ ! == _pHandle -> -> -> 0 `i `*v `*S10 35  ]
+"268
+[; ;pcf857x_driver.c: 268:     return 2;
+[e ) -> -> 2 `i `uc ]
+[e $UE 34  ]
+[e :U 35 ]
+"270
+[; ;pcf857x_driver.c: 270:     if(pHandle->device_variant == PCF8574A_VARIANT)
+[e $ ! == -> . *U _pHandle 9 `i -> . `E682 1 `i 36  ]
+"271
+[; ;pcf857x_driver.c: 271:         default_address = PCF8574A_ADDRESS_DEFAULT;
+[e = _default_address -> . `E687 1 `uc ]
+[e $U 37  ]
+"272
+[; ;pcf857x_driver.c: 272:     else
+[e :U 36 ]
+"273
+[; ;pcf857x_driver.c: 273:         default_address = PCF857X_ADDRESS_DEFAULT;
+[e = _default_address -> . `E687 0 `uc ]
+[e :U 37 ]
+"275
+[; ;pcf857x_driver.c: 275:     *pAddr_pin = (pcf857x_address_t) (pHandle->i2c_address | (default_address));
+[e = *U _pAddr_pin -> | -> . *U _pHandle 8 `i -> _default_address `i `E687 ]
+"277
+[; ;pcf857x_driver.c: 277:      return 0;
+[e ) -> -> 0 `i `uc ]
+[e $UE 34  ]
+"278
+[; ;pcf857x_driver.c: 278: }
+[e :UE 34 ]
+}
+"292
+[; ;pcf857x_driver.c: 292: uint8_t pcf857x_set_variant(pcf857x_handle_t *const pHandle, pcf857x_variant_t variant)
+[v _pcf857x_set_variant `(uc ~T0 @X0 1 ef2`C*S10`E682 ]
+"293
+[; ;pcf857x_driver.c: 293: {
+{
+[e :U _pcf857x_set_variant ]
+[v F923 `*S10 ~T0 @X0 1 t ]
+"292
+[; ;pcf857x_driver.c: 292: uint8_t pcf857x_set_variant(pcf857x_handle_t *const pHandle, pcf857x_variant_t variant)
+[v _pHandle `C*S10 ~T0 @X0 1 r1 ]
+[v _variant `E682 ~T0 @X0 1 r2 ]
+"293
+[; ;pcf857x_driver.c: 293: {
+[f ]
+"294
+[; ;pcf857x_driver.c: 294:     if(pHandle == ((void*)0))
+[e $ ! == _pHandle -> -> -> 0 `i `*v `*S10 39  ]
+"295
+[; ;pcf857x_driver.c: 295:         return 2;
+[e ) -> -> 2 `i `uc ]
+[e $UE 38  ]
+[e :U 39 ]
+"296
+[; ;pcf857x_driver.c: 296:     if(pHandle->inited != 1)
+[e $ ! != -> . *U _pHandle 11 `i -> 1 `i 40  ]
+"297
+[; ;pcf857x_driver.c: 297:         return 3;
+[e ) -> -> 3 `i `uc ]
+[e $UE 38  ]
+[e :U 40 ]
+"299
+[; ;pcf857x_driver.c: 299:     if(variant > 0x02 || variant < 0 ){
+[e $ ! || > -> _variant `ui -> -> 2 `i `ui < -> _variant `ui -> -> 0 `i `ui 41  ]
+{
+"300
+[; ;pcf857x_driver.c: 300:        a_pcf857x_print_error_msg(pHandle, "set variant, invalid");
+[e ( _a_pcf857x_print_error_msg (2 , _pHandle :s 5C ]
+"301
+[; ;pcf857x_driver.c: 301:         return 4;
+[e ) -> -> 4 `i `uc ]
+[e $UE 38  ]
+"302
+[; ;pcf857x_driver.c: 302:     }
+}
+[e :U 41 ]
+"304
+[; ;pcf857x_driver.c: 304:     pHandle->device_variant = variant;
+[e = . *U _pHandle 9 -> _variant `uc ]
+"305
+[; ;pcf857x_driver.c: 305:     if(pHandle->device_variant != variant)
+[e $ ! != -> . *U _pHandle 9 `ui -> _variant `ui 42  ]
+"306
+[; ;pcf857x_driver.c: 306:     {
+{
+"307
+[; ;pcf857x_driver.c: 307:         return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 38  ]
+"308
+[; ;pcf857x_driver.c: 308:     }
+}
+[e :U 42 ]
+"310
+[; ;pcf857x_driver.c: 310:     return 0;
+[e ) -> -> 0 `i `uc ]
+[e $UE 38  ]
+"311
+[; ;pcf857x_driver.c: 311: }
+[e :UE 38 ]
+}
+"324
+[; ;pcf857x_driver.c: 324: uint8_t pcf857x_get_variant(pcf857x_handle_t *const pHandle, pcf857x_variant_t *pVariant)
+[v _pcf857x_get_variant `(uc ~T0 @X0 1 ef2`C*S10`*E682 ]
+"325
+[; ;pcf857x_driver.c: 325: {
+{
+[e :U _pcf857x_get_variant ]
+[v F928 `*S10 ~T0 @X0 1 t ]
+"324
+[; ;pcf857x_driver.c: 324: uint8_t pcf857x_get_variant(pcf857x_handle_t *const pHandle, pcf857x_variant_t *pVariant)
+[v _pHandle `C*S10 ~T0 @X0 1 r1 ]
+[v _pVariant `*E682 ~T0 @X0 1 r2 ]
+"325
+[; ;pcf857x_driver.c: 325: {
+[f ]
+"326
+[; ;pcf857x_driver.c: 326:      if(pHandle == ((void*)0))
+[e $ ! == _pHandle -> -> -> 0 `i `*v `*S10 44  ]
+"327
+[; ;pcf857x_driver.c: 327:         return 2;
+[e ) -> -> 2 `i `uc ]
+[e $UE 43  ]
+[e :U 44 ]
+"328
+[; ;pcf857x_driver.c: 328:     if(pHandle->inited != 1)
+[e $ ! != -> . *U _pHandle 11 `i -> 1 `i 45  ]
+"329
+[; ;pcf857x_driver.c: 329:         return 3;
+[e ) -> -> 3 `i `uc ]
+[e $UE 43  ]
+[e :U 45 ]
+"331
+[; ;pcf857x_driver.c: 331:     *pVariant = pHandle->device_variant;
+[e = *U _pVariant -> . *U _pHandle 9 `E682 ]
+"332
+[; ;pcf857x_driver.c: 332:     if( *pVariant != pHandle->device_variant)
+[e $ ! != -> *U _pVariant `ui -> . *U _pHandle 9 `ui 46  ]
+"333
+[; ;pcf857x_driver.c: 333:     {
+{
+"334
+[; ;pcf857x_driver.c: 334:         return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 43  ]
+"335
+[; ;pcf857x_driver.c: 335:     }
+}
+[e :U 46 ]
+"337
+[; ;pcf857x_driver.c: 337:     return 0;
+[e ) -> -> 0 `i `uc ]
+[e $UE 43  ]
+"338
+[; ;pcf857x_driver.c: 338: }
+[e :UE 43 ]
+}
+"353
+[; ;pcf857x_driver.c: 353: uint8_t pcf857x_pin_write(pcf857x_handle_t *const pHandle, pcf857x_gpio_port_t pin, pcf857x_port_logic_level_t logic_level)
+[v _pcf857x_pin_write `(uc ~T0 @X0 1 ef3`C*S10`E703`E721 ]
+"354
+[; ;pcf857x_driver.c: 354: {
+{
+[e :U _pcf857x_pin_write ]
+[v F933 `*S10 ~T0 @X0 1 t ]
+"353
+[; ;pcf857x_driver.c: 353: uint8_t pcf857x_pin_write(pcf857x_handle_t *const pHandle, pcf857x_gpio_port_t pin, pcf857x_port_logic_level_t logic_level)
+[v _pHandle `C*S10 ~T0 @X0 1 r1 ]
+[v _pin `E703 ~T0 @X0 1 r2 ]
+[v _logic_level `E721 ~T0 @X0 1 r3 ]
+"354
+[; ;pcf857x_driver.c: 354: {
+[f ]
+"355
+[; ;pcf857x_driver.c: 355:     uint8_t status[2];
+[v _status `uc ~T0 @X0 -> 2 `i a ]
+"356
+[; ;pcf857x_driver.c: 356:     uint16_t formated_data;
+[v _formated_data `us ~T0 @X0 1 a ]
+"358
+[; ;pcf857x_driver.c: 358:     memset(status, 0, 2);
+[e ( _memset (3 , , -> &U _status `*v -> 0 `i -> -> 2 `i `ui ]
+"360
+[; ;pcf857x_driver.c: 360:     if(pHandle == ((void*)0))
+[e $ ! == _pHandle -> -> -> 0 `i `*v `*S10 48  ]
+"361
+[; ;pcf857x_driver.c: 361:         return 2;
+[e ) -> -> 2 `i `uc ]
+[e $UE 47  ]
+[e :U 48 ]
+"362
+[; ;pcf857x_driver.c: 362:     if(pHandle->inited != 1)
+[e $ ! != -> . *U _pHandle 11 `i -> 1 `i 49  ]
+"363
+[; ;pcf857x_driver.c: 363:         return 3;
+[e ) -> -> 3 `i `uc ]
+[e $UE 47  ]
+[e :U 49 ]
+"364
+[; ;pcf857x_driver.c: 364:     if(pin > PCF857X_GPIO_PIN_17 || pin < PCF857X_GPIO_PIN_0)
+[e $ ! || > -> _pin `ui -> . `E703 15 `ui < -> _pin `ui -> . `E703 0 `ui 50  ]
+"365
+[; ;pcf857x_driver.c: 365:         return 4;
+[e ) -> -> 4 `i `uc ]
+[e $UE 47  ]
+[e :U 50 ]
+"367
+[; ;pcf857x_driver.c: 367:     switch(pHandle->device_variant)
+[e $U 52  ]
+"368
+[; ;pcf857x_driver.c: 368:     {
+{
+"370
+[; ;pcf857x_driver.c: 370:         case PCF8575_VARIANT:
+[e :U 53 ]
+"371
+[; ;pcf857x_driver.c: 371:         {
+{
+"372
+[; ;pcf857x_driver.c: 372:             err = a_pcf857x_i2c_read(pHandle, ((void*)0), (uint8_t *)status, 2);
+[e = _err ( _a_pcf857x_i2c_read (4 , , , _pHandle -> -> -> 0 `i `*v `us &U _status -> -> 2 `i `uc ]
+"373
+[; ;pcf857x_driver.c: 373:             if(err)
+[e $ ! != -> _err `i -> 0 `i 54  ]
+"374
+[; ;pcf857x_driver.c: 374:             {
+{
+"375
+[; ;pcf857x_driver.c: 375:                 a_pcf857x_print_error_msg(pHandle, "read port register");
+[e ( _a_pcf857x_print_error_msg (2 , _pHandle :s 6C ]
+"376
+[; ;pcf857x_driver.c: 376:                 return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 47  ]
+"377
+[; ;pcf857x_driver.c: 377:             }
+}
+[e :U 54 ]
+"378
+[; ;pcf857x_driver.c: 378:             formated_data = (status[1] << 8)|(status[0]);
+[e = _formated_data -> | << -> *U + &U _status * -> -> -> 1 `i `ui `ux -> -> # *U &U _status `ui `ux `i -> 8 `i -> *U + &U _status * -> -> -> 0 `i `ui `ux -> -> # *U &U _status `ui `ux `i `us ]
+"380
+[; ;pcf857x_driver.c: 380:             if(pin > PCF857X_GPIO_PIN_7)
+[e $ ! > -> _pin `ui -> . `E703 7 `ui 55  ]
+"381
+[; ;pcf857x_driver.c: 381:             {
+{
+"382
+[; ;pcf857x_driver.c: 382:                 pin = pin - 2;
+[e = _pin -> - -> _pin `ui -> -> 2 `i `ui `E703 ]
+"383
+[; ;pcf857x_driver.c: 383:                 formated_data &= ~(1 << pin);
+[e =& _formated_data -> ~ << -> 1 `i -> _pin `ui `us ]
+"384
+[; ;pcf857x_driver.c: 384:                 formated_data |= (logic_level << pin);
+[e =| _formated_data -> << -> _logic_level `ui -> _pin `ui `us ]
+"386
+[; ;pcf857x_driver.c: 386:                 status[0] = (formated_data & 0x00ff);
+[e = *U + &U _status * -> -> -> 0 `i `ui `ux -> -> # *U &U _status `ui `ux -> & -> _formated_data `ui -> -> 255 `i `ui `uc ]
+"387
+[; ;pcf857x_driver.c: 387:                 status[1] = (formated_data & 0xff00) >> 8;
+[e = *U + &U _status * -> -> -> 1 `i `ui `ux -> -> # *U &U _status `ui `ux -> >> & -> _formated_data `ui -> 65280 `ui -> 8 `i `uc ]
+"389
+[; ;pcf857x_driver.c: 389:                 err = a_pcf857x_i2c_write(pHandle, ((void*)0), (uint8_t *)status, 2);
+[e = _err ( _a_pcf857x_i2c_write (4 , , , _pHandle -> -> -> 0 `i `*v `uc &U _status -> -> 2 `i `uc ]
+"390
+[; ;pcf857x_driver.c: 390:                 if(err)
+[e $ ! != -> _err `i -> 0 `i 56  ]
+"391
+[; ;pcf857x_driver.c: 391:                 {
+{
+"392
+[; ;pcf857x_driver.c: 392:                     a_pcf857x_print_error_msg(pHandle, "write port register");
+[e ( _a_pcf857x_print_error_msg (2 , _pHandle :s 7C ]
+"393
+[; ;pcf857x_driver.c: 393:                     return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 47  ]
+"394
+[; ;pcf857x_driver.c: 394:                 }
+}
+[e :U 56 ]
+"395
+[; ;pcf857x_driver.c: 395:             }else{
+}
+[e $U 57  ]
+[e :U 55 ]
+{
+"396
+[; ;pcf857x_driver.c: 396:                 formated_data &= ~(1 << pin);
+[e =& _formated_data -> ~ << -> 1 `i -> _pin `ui `us ]
+"397
+[; ;pcf857x_driver.c: 397:                 formated_data |= (logic_level << pin);
+[e =| _formated_data -> << -> _logic_level `ui -> _pin `ui `us ]
+"399
+[; ;pcf857x_driver.c: 399:                 err = a_pcf857x_i2c_write(pHandle, ((void*)0), (uint8_t *)&formated_data, 2);
+[e = _err ( _a_pcf857x_i2c_write (4 , , , _pHandle -> -> -> 0 `i `*v `uc -> &U _formated_data `*uc -> -> 2 `i `uc ]
+"400
+[; ;pcf857x_driver.c: 400:                 if(err)
+[e $ ! != -> _err `i -> 0 `i 58  ]
+"401
+[; ;pcf857x_driver.c: 401:                 {
+{
+"402
+[; ;pcf857x_driver.c: 402:                     a_pcf857x_print_error_msg(pHandle, "write port register");
+[e ( _a_pcf857x_print_error_msg (2 , _pHandle :s 8C ]
+"403
+[; ;pcf857x_driver.c: 403:                     return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 47  ]
+"404
+[; ;pcf857x_driver.c: 404:                 }
+}
+[e :U 58 ]
+"405
+[; ;pcf857x_driver.c: 405:             }
+}
+[e :U 57 ]
+"407
+[; ;pcf857x_driver.c: 407:             break;
+[e $U 51  ]
+"408
+[; ;pcf857x_driver.c: 408:         }
+}
+"410
+[; ;pcf857x_driver.c: 410:         case PCF8574A_VARIANT:
+[e :U 59 ]
+"411
+[; ;pcf857x_driver.c: 411:         {
+{
+"412
+[; ;pcf857x_driver.c: 412:             if(pin > PCF857X_GPIO_PIN_7){
+[e $ ! > -> _pin `ui -> . `E703 7 `ui 60  ]
+{
+"414
+[; ;pcf857x_driver.c: 414:                 a_pcf857x_print_error_msg(pHandle, "to write, invalid gpio pin");
+[e ( _a_pcf857x_print_error_msg (2 , _pHandle :s 9C ]
+"415
+[; ;pcf857x_driver.c: 415:                 return 4;
+[e ) -> -> 4 `i `uc ]
+[e $UE 47  ]
+"416
+[; ;pcf857x_driver.c: 416:             }
+}
+[e :U 60 ]
+"417
+[; ;pcf857x_driver.c: 417:             err = a_pcf857x_i2c_read(pHandle, ((void*)0), (uint8_t *)status, 1);
+[e = _err ( _a_pcf857x_i2c_read (4 , , , _pHandle -> -> -> 0 `i `*v `us &U _status -> -> 1 `i `uc ]
+"418
+[; ;pcf857x_driver.c: 418:             if(err)
+[e $ ! != -> _err `i -> 0 `i 61  ]
+"419
+[; ;pcf857x_driver.c: 419:             {
+{
+"420
+[; ;pcf857x_driver.c: 420:                 a_pcf857x_print_error_msg(pHandle, "read port register");
+[e ( _a_pcf857x_print_error_msg (2 , _pHandle :s 10C ]
+"421
+[; ;pcf857x_driver.c: 421:                 return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 47  ]
+"422
+[; ;pcf857x_driver.c: 422:             }
+}
+[e :U 61 ]
+"423
+[; ;pcf857x_driver.c: 423:             formated_data = status[0];
+[e = _formated_data -> *U + &U _status * -> -> -> 0 `i `ui `ux -> -> # *U &U _status `ui `ux `us ]
+"424
+[; ;pcf857x_driver.c: 424:             formated_data &= ~(1 << pin);
+[e =& _formated_data -> ~ << -> 1 `i -> _pin `ui `us ]
+"425
+[; ;pcf857x_driver.c: 425:             formated_data |= (logic_level << pin);
+[e =| _formated_data -> << -> _logic_level `ui -> _pin `ui `us ]
+"427
+[; ;pcf857x_driver.c: 427:             err = a_pcf857x_i2c_write(pHandle, ((void*)0), (uint8_t *)&formated_data, 1);
+[e = _err ( _a_pcf857x_i2c_write (4 , , , _pHandle -> -> -> 0 `i `*v `uc -> &U _formated_data `*uc -> -> 1 `i `uc ]
+"428
+[; ;pcf857x_driver.c: 428:             if(err)
+[e $ ! != -> _err `i -> 0 `i 62  ]
+"429
+[; ;pcf857x_driver.c: 429:             {
+{
+"430
+[; ;pcf857x_driver.c: 430:                 a_pcf857x_print_error_msg(pHandle, "write port register");
+[e ( _a_pcf857x_print_error_msg (2 , _pHandle :s 11C ]
+"431
+[; ;pcf857x_driver.c: 431:                 return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 47  ]
+"432
+[; ;pcf857x_driver.c: 432:             }
+}
+[e :U 62 ]
+"434
+[; ;pcf857x_driver.c: 434:             break;
+[e $U 51  ]
+"435
+[; ;pcf857x_driver.c: 435:         }
+}
+"437
+[; ;pcf857x_driver.c: 437:         case PCF8574_VARIANT:
+[e :U 63 ]
+"438
+[; ;pcf857x_driver.c: 438:         {
+{
+"439
+[; ;pcf857x_driver.c: 439:              if(pin > PCF857X_GPIO_PIN_7){
+[e $ ! > -> _pin `ui -> . `E703 7 `ui 64  ]
+{
+"441
+[; ;pcf857x_driver.c: 441:                 a_pcf857x_print_error_msg(pHandle, "to write pin, invalid gpio");
+[e ( _a_pcf857x_print_error_msg (2 , _pHandle :s 12C ]
+"442
+[; ;pcf857x_driver.c: 442:                 return 4;
+[e ) -> -> 4 `i `uc ]
+[e $UE 47  ]
+"443
+[; ;pcf857x_driver.c: 443:             }
+}
+[e :U 64 ]
+"444
+[; ;pcf857x_driver.c: 444:             err = a_pcf857x_i2c_read(pHandle, ((void*)0), (uint8_t *)status, 1);
+[e = _err ( _a_pcf857x_i2c_read (4 , , , _pHandle -> -> -> 0 `i `*v `us &U _status -> -> 1 `i `uc ]
+"445
+[; ;pcf857x_driver.c: 445:             if(err)
+[e $ ! != -> _err `i -> 0 `i 65  ]
+"446
+[; ;pcf857x_driver.c: 446:             {
+{
+"447
+[; ;pcf857x_driver.c: 447:                 a_pcf857x_print_error_msg(pHandle, "read port register");
+[e ( _a_pcf857x_print_error_msg (2 , _pHandle :s 13C ]
+"448
+[; ;pcf857x_driver.c: 448:                 return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 47  ]
+"449
+[; ;pcf857x_driver.c: 449:             }
+}
+[e :U 65 ]
+"450
+[; ;pcf857x_driver.c: 450:             formated_data = status[0];
+[e = _formated_data -> *U + &U _status * -> -> -> 0 `i `ui `ux -> -> # *U &U _status `ui `ux `us ]
+"451
+[; ;pcf857x_driver.c: 451:             formated_data &= ~(1 << pin);
+[e =& _formated_data -> ~ << -> 1 `i -> _pin `ui `us ]
+"452
+[; ;pcf857x_driver.c: 452:             formated_data |= (logic_level << pin);
+[e =| _formated_data -> << -> _logic_level `ui -> _pin `ui `us ]
+"454
+[; ;pcf857x_driver.c: 454:             err = a_pcf857x_i2c_write(pHandle, ((void*)0), (uint8_t *)&formated_data, 1);
+[e = _err ( _a_pcf857x_i2c_write (4 , , , _pHandle -> -> -> 0 `i `*v `uc -> &U _formated_data `*uc -> -> 1 `i `uc ]
+"455
+[; ;pcf857x_driver.c: 455:             if(err)
+[e $ ! != -> _err `i -> 0 `i 66  ]
+"456
+[; ;pcf857x_driver.c: 456:             {
+{
+"457
+[; ;pcf857x_driver.c: 457:                 a_pcf857x_print_error_msg(pHandle, "write port register");
+[e ( _a_pcf857x_print_error_msg (2 , _pHandle :s 14C ]
+"458
+[; ;pcf857x_driver.c: 458:                 return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 47  ]
+"459
+[; ;pcf857x_driver.c: 459:             }
+}
+[e :U 66 ]
+"461
+[; ;pcf857x_driver.c: 461:             break;
+[e $U 51  ]
+"462
+[; ;pcf857x_driver.c: 462:         }
+}
+"464
+[; ;pcf857x_driver.c: 464:         default:
+[e :U 67 ]
+"465
+[; ;pcf857x_driver.c: 465:             return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 47  ]
+"466
+[; ;pcf857x_driver.c: 466:         break;
+[e $U 51  ]
+"468
+[; ;pcf857x_driver.c: 468:     }
+}
+[e $U 51  ]
+[e :U 52 ]
+[e [\ -> . *U _pHandle 9 `i , $ . `E682 2 53
+ , $ . `E682 1 59
+ , $ . `E682 0 63
+ 67 ]
+[e :U 51 ]
+"470
+[; ;pcf857x_driver.c: 470:     return 0;
+[e ) -> -> 0 `i `uc ]
+[e $UE 47  ]
+"471
+[; ;pcf857x_driver.c: 471: }
+[e :UE 47 ]
+}
+"483
+[; ;pcf857x_driver.c: 483: uint8_t pcf857x_pin_write_all(pcf857x_handle_t *const pHandle, pcf857x_port_logic_level_t logic_level)
+[v _pcf857x_pin_write_all `(uc ~T0 @X0 1 ef2`C*S10`E721 ]
+"484
+[; ;pcf857x_driver.c: 484: {
+{
+[e :U _pcf857x_pin_write_all ]
+[v F941 `*S10 ~T0 @X0 1 t ]
+"483
+[; ;pcf857x_driver.c: 483: uint8_t pcf857x_pin_write_all(pcf857x_handle_t *const pHandle, pcf857x_port_logic_level_t logic_level)
+[v _pHandle `C*S10 ~T0 @X0 1 r1 ]
+[v _logic_level `E721 ~T0 @X0 1 r2 ]
+"484
+[; ;pcf857x_driver.c: 484: {
+[f ]
+"485
+[; ;pcf857x_driver.c: 485:     uint8_t status[2];
+[v _status `uc ~T0 @X0 -> 2 `i a ]
+"487
+[; ;pcf857x_driver.c: 487:     if(pHandle == ((void*)0))
+[e $ ! == _pHandle -> -> -> 0 `i `*v `*S10 69  ]
+"488
+[; ;pcf857x_driver.c: 488:         return 2;
+[e ) -> -> 2 `i `uc ]
+[e $UE 68  ]
+[e :U 69 ]
+"489
+[; ;pcf857x_driver.c: 489:     if(pHandle->inited != 1)
+[e $ ! != -> . *U _pHandle 11 `i -> 1 `i 70  ]
+"490
+[; ;pcf857x_driver.c: 490:         return 3;
+[e ) -> -> 3 `i `uc ]
+[e $UE 68  ]
+[e :U 70 ]
+"492
+[; ;pcf857x_driver.c: 492:    switch(pHandle->device_variant)
+[e $U 72  ]
+"493
+[; ;pcf857x_driver.c: 493:     {
+{
+"495
+[; ;pcf857x_driver.c: 495:         case PCF8575_VARIANT:
+[e :U 73 ]
+"496
+[; ;pcf857x_driver.c: 496:         {
+{
+"497
+[; ;pcf857x_driver.c: 497:             if(logic_level == 0x01){status[0] = 0xff; status[1] = 0xff;}
+[e $ ! == -> _logic_level `ui -> -> 1 `i `ui 74  ]
+{
+[e = *U + &U _status * -> -> -> 0 `i `ui `ux -> -> # *U &U _status `ui `ux -> -> 255 `i `uc ]
+[e = *U + &U _status * -> -> -> 1 `i `ui `ux -> -> # *U &U _status `ui `ux -> -> 255 `i `uc ]
+}
+[e $U 75  ]
+"498
+[; ;pcf857x_driver.c: 498:             else{status[0] = 0x00; status[1] = 0x00; }
+[e :U 74 ]
+{
+[e = *U + &U _status * -> -> -> 0 `i `ui `ux -> -> # *U &U _status `ui `ux -> -> 0 `i `uc ]
+[e = *U + &U _status * -> -> -> 1 `i `ui `ux -> -> # *U &U _status `ui `ux -> -> 0 `i `uc ]
+}
+[e :U 75 ]
+"499
+[; ;pcf857x_driver.c: 499:             err = a_pcf857x_i2c_write(pHandle, ((void*)0), (uint8_t *)status, 2);
+[e = _err ( _a_pcf857x_i2c_write (4 , , , _pHandle -> -> -> 0 `i `*v `uc &U _status -> -> 2 `i `uc ]
+"500
+[; ;pcf857x_driver.c: 500:             if (err != PCF857X_DRV_OK){
+[e $ ! != -> _err `i -> . `E676 0 `i 76  ]
+{
+"501
+[; ;pcf857x_driver.c: 501:                 return err;
+[e ) _err ]
+[e $UE 68  ]
+"502
+[; ;pcf857x_driver.c: 502:             }
+}
+[e :U 76 ]
+"503
+[; ;pcf857x_driver.c: 503:             break;
+[e $U 71  ]
+"504
+[; ;pcf857x_driver.c: 504:         }
+}
+"506
+[; ;pcf857x_driver.c: 506:         case PCF8574A_VARIANT:
+[e :U 77 ]
+"507
+[; ;pcf857x_driver.c: 507:         {
+{
+"508
+[; ;pcf857x_driver.c: 508:           if(logic_level == 0x01){logic_level = 0xff;}
+[e $ ! == -> _logic_level `ui -> -> 1 `i `ui 78  ]
+{
+[e = _logic_level -> -> 255 `i `E721 ]
+}
+[e :U 78 ]
+"509
+[; ;pcf857x_driver.c: 509:           err = a_pcf857x_i2c_write(pHandle, ((void*)0), (uint8_t *)&logic_level, 1);
+[e = _err ( _a_pcf857x_i2c_write (4 , , , _pHandle -> -> -> 0 `i `*v `uc -> &U _logic_level `*uc -> -> 1 `i `uc ]
+"510
+[; ;pcf857x_driver.c: 510:           if (err != PCF857X_DRV_OK){
+[e $ ! != -> _err `i -> . `E676 0 `i 79  ]
+{
+"511
+[; ;pcf857x_driver.c: 511:             return err;
+[e ) _err ]
+[e $UE 68  ]
+"512
+[; ;pcf857x_driver.c: 512:           }
+}
+[e :U 79 ]
+"513
+[; ;pcf857x_driver.c: 513:             break;
+[e $U 71  ]
+"514
+[; ;pcf857x_driver.c: 514:         }
+}
+"516
+[; ;pcf857x_driver.c: 516:         case PCF8574_VARIANT:
+[e :U 80 ]
+"517
+[; ;pcf857x_driver.c: 517:         {
+{
+"518
+[; ;pcf857x_driver.c: 518:           if(logic_level == 0x01){logic_level = 0xff;}
+[e $ ! == -> _logic_level `ui -> -> 1 `i `ui 81  ]
+{
+[e = _logic_level -> -> 255 `i `E721 ]
+}
+[e :U 81 ]
+"519
+[; ;pcf857x_driver.c: 519:           err = a_pcf857x_i2c_write(pHandle, ((void*)0), (uint8_t *)&logic_level, 1);
+[e = _err ( _a_pcf857x_i2c_write (4 , , , _pHandle -> -> -> 0 `i `*v `uc -> &U _logic_level `*uc -> -> 1 `i `uc ]
+"520
+[; ;pcf857x_driver.c: 520:           if (err != PCF857X_DRV_OK){
+[e $ ! != -> _err `i -> . `E676 0 `i 82  ]
+{
+"521
+[; ;pcf857x_driver.c: 521:             return err;
+[e ) _err ]
+[e $UE 68  ]
+"522
+[; ;pcf857x_driver.c: 522:           }
+}
+[e :U 82 ]
+"523
+[; ;pcf857x_driver.c: 523:             break;
+[e $U 71  ]
+"524
+[; ;pcf857x_driver.c: 524:         }
+}
+"526
+[; ;pcf857x_driver.c: 526:         default:
+[e :U 83 ]
+"527
+[; ;pcf857x_driver.c: 527:             return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 68  ]
+"528
+[; ;pcf857x_driver.c: 528:         break;
+[e $U 71  ]
+"530
+[; ;pcf857x_driver.c: 530:     }
+}
+[e $U 71  ]
+[e :U 72 ]
+[e [\ -> . *U _pHandle 9 `i , $ . `E682 2 73
+ , $ . `E682 1 77
+ , $ . `E682 0 80
+ 83 ]
+[e :U 71 ]
+"532
+[; ;pcf857x_driver.c: 532:     return 0;
+[e ) -> -> 0 `i `uc ]
+[e $UE 68  ]
+"533
+[; ;pcf857x_driver.c: 533: }
+[e :UE 68 ]
+}
+"548
+[; ;pcf857x_driver.c: 548: uint8_t pcf857x_pin_read(pcf857x_handle_t *const pHandle, pcf857x_gpio_port_t pin, pcf857x_port_logic_level_t *logic_level)
+[v _pcf857x_pin_read `(uc ~T0 @X0 1 ef3`C*S10`E703`*E721 ]
+"549
+[; ;pcf857x_driver.c: 549: {
+{
+[e :U _pcf857x_pin_read ]
+[v F947 `*S10 ~T0 @X0 1 t ]
+"548
+[; ;pcf857x_driver.c: 548: uint8_t pcf857x_pin_read(pcf857x_handle_t *const pHandle, pcf857x_gpio_port_t pin, pcf857x_port_logic_level_t *logic_level)
+[v _pHandle `C*S10 ~T0 @X0 1 r1 ]
+[v _pin `E703 ~T0 @X0 1 r2 ]
+[v _logic_level `*E721 ~T0 @X0 1 r3 ]
+"549
+[; ;pcf857x_driver.c: 549: {
+[f ]
+"550
+[; ;pcf857x_driver.c: 550:     uint8_t status[2];
+[v _status `uc ~T0 @X0 -> 2 `i a ]
+"551
+[; ;pcf857x_driver.c: 551:     uint16_t formated_data;
+[v _formated_data `us ~T0 @X0 1 a ]
+"553
+[; ;pcf857x_driver.c: 553:     memset(status, 0, 2);
+[e ( _memset (3 , , -> &U _status `*v -> 0 `i -> -> 2 `i `ui ]
+"555
+[; ;pcf857x_driver.c: 555:     if(pHandle == ((void*)0))
+[e $ ! == _pHandle -> -> -> 0 `i `*v `*S10 85  ]
+"556
+[; ;pcf857x_driver.c: 556:         return 2;
+[e ) -> -> 2 `i `uc ]
+[e $UE 84  ]
+[e :U 85 ]
+"557
+[; ;pcf857x_driver.c: 557:     if(pHandle->inited != 1)
+[e $ ! != -> . *U _pHandle 11 `i -> 1 `i 86  ]
+"558
+[; ;pcf857x_driver.c: 558:         return 3;
+[e ) -> -> 3 `i `uc ]
+[e $UE 84  ]
+[e :U 86 ]
+"559
+[; ;pcf857x_driver.c: 559:     if(pin > PCF857X_GPIO_PIN_17 || pin < PCF857X_GPIO_PIN_0)
+[e $ ! || > -> _pin `ui -> . `E703 15 `ui < -> _pin `ui -> . `E703 0 `ui 87  ]
+"560
+[; ;pcf857x_driver.c: 560:         return 4;
+[e ) -> -> 4 `i `uc ]
+[e $UE 84  ]
+[e :U 87 ]
+"562
+[; ;pcf857x_driver.c: 562:     err = pcf857x_pin_write(pHandle, pin, 0x01);
+[e = _err ( _pcf857x_pin_write (3 , , _pHandle _pin -> -> 1 `i `E721 ]
+"563
+[; ;pcf857x_driver.c: 563:     if(err){
+[e $ ! != -> _err `i -> 0 `i 88  ]
+{
+"564
+[; ;pcf857x_driver.c: 564:         a_pcf857x_print_error_msg(pHandle, "write port before read");
+[e ( _a_pcf857x_print_error_msg (2 , _pHandle :s 15C ]
+"565
+[; ;pcf857x_driver.c: 565:         return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 84  ]
+"566
+[; ;pcf857x_driver.c: 566:     }
+}
+[e :U 88 ]
+"568
+[; ;pcf857x_driver.c: 568:     switch(pHandle->device_variant)
+[e $U 90  ]
+"569
+[; ;pcf857x_driver.c: 569:     {
+{
+"571
+[; ;pcf857x_driver.c: 571:         case PCF8575_VARIANT:
+[e :U 91 ]
+"572
+[; ;pcf857x_driver.c: 572:         {
+{
+"573
+[; ;pcf857x_driver.c: 573:             err = a_pcf857x_i2c_read(pHandle, ((void*)0), (uint8_t *)status, 2);
+[e = _err ( _a_pcf857x_i2c_read (4 , , , _pHandle -> -> -> 0 `i `*v `us &U _status -> -> 2 `i `uc ]
+"574
+[; ;pcf857x_driver.c: 574:             if(err)
+[e $ ! != -> _err `i -> 0 `i 92  ]
+"575
+[; ;pcf857x_driver.c: 575:             {
+{
+"576
+[; ;pcf857x_driver.c: 576:                 a_pcf857x_print_error_msg(pHandle, "read port register");
+[e ( _a_pcf857x_print_error_msg (2 , _pHandle :s 16C ]
+"577
+[; ;pcf857x_driver.c: 577:                 return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 84  ]
+"578
+[; ;pcf857x_driver.c: 578:             }
+}
+[e :U 92 ]
+"579
+[; ;pcf857x_driver.c: 579:             formated_data = (status[1] << 8)|(status[0]);
+[e = _formated_data -> | << -> *U + &U _status * -> -> -> 1 `i `ui `ux -> -> # *U &U _status `ui `ux `i -> 8 `i -> *U + &U _status * -> -> -> 0 `i `ui `ux -> -> # *U &U _status `ui `ux `i `us ]
+"581
+[; ;pcf857x_driver.c: 581:             if(pin > PCF857X_GPIO_PIN_7)
+[e $ ! > -> _pin `ui -> . `E703 7 `ui 93  ]
+"582
+[; ;pcf857x_driver.c: 582:             {
+{
+"583
+[; ;pcf857x_driver.c: 583:                 pin = pin - 2;
+[e = _pin -> - -> _pin `ui -> -> 2 `i `ui `E703 ]
+"584
+[; ;pcf857x_driver.c: 584:             }
+}
+[e :U 93 ]
+"585
+[; ;pcf857x_driver.c: 585:             *logic_level = (pcf857x_port_logic_level_t)((formated_data & pcf857x_pin_mask_arr[pin]) >> pin);
+[e = *U _logic_level -> >> & -> _formated_data `ui -> *U + &U _pcf857x_pin_mask_arr * -> _pin `ux -> -> # *U &U _pcf857x_pin_mask_arr `ui `ux `ui -> _pin `ui `E721 ]
+"587
+[; ;pcf857x_driver.c: 587:             break;
+[e $U 89  ]
+"588
+[; ;pcf857x_driver.c: 588:         }
+}
+"590
+[; ;pcf857x_driver.c: 590:         case PCF8574A_VARIANT:
+[e :U 94 ]
+"591
+[; ;pcf857x_driver.c: 591:         {
+{
+"593
+[; ;pcf857x_driver.c: 593:             if(pin > PCF857X_GPIO_PIN_7){
+[e $ ! > -> _pin `ui -> . `E703 7 `ui 95  ]
+{
+"595
+[; ;pcf857x_driver.c: 595:                 a_pcf857x_print_error_msg(pHandle, "to read pin, invalid gpio");
+[e ( _a_pcf857x_print_error_msg (2 , _pHandle :s 17C ]
+"596
+[; ;pcf857x_driver.c: 596:                 return 4;
+[e ) -> -> 4 `i `uc ]
+[e $UE 84  ]
+"597
+[; ;pcf857x_driver.c: 597:             }
+}
+[e :U 95 ]
+"599
+[; ;pcf857x_driver.c: 599:             err = a_pcf857x_i2c_read(pHandle, ((void*)0), (uint8_t *)status, 1);
+[e = _err ( _a_pcf857x_i2c_read (4 , , , _pHandle -> -> -> 0 `i `*v `us &U _status -> -> 1 `i `uc ]
+"600
+[; ;pcf857x_driver.c: 600:             if(err)
+[e $ ! != -> _err `i -> 0 `i 96  ]
+"601
+[; ;pcf857x_driver.c: 601:             {
+{
+"602
+[; ;pcf857x_driver.c: 602:                 a_pcf857x_print_error_msg(pHandle, "read port register");
+[e ( _a_pcf857x_print_error_msg (2 , _pHandle :s 18C ]
+"603
+[; ;pcf857x_driver.c: 603:                 return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 84  ]
+"604
+[; ;pcf857x_driver.c: 604:             }
+}
+[e :U 96 ]
+"606
+[; ;pcf857x_driver.c: 606:             formated_data = status[0];
+[e = _formated_data -> *U + &U _status * -> -> -> 0 `i `ui `ux -> -> # *U &U _status `ui `ux `us ]
+"607
+[; ;pcf857x_driver.c: 607:             *logic_level = (pcf857x_port_logic_level_t)((formated_data & pcf857x_pin_mask_arr[pin]) >> pin);
+[e = *U _logic_level -> >> & -> _formated_data `ui -> *U + &U _pcf857x_pin_mask_arr * -> _pin `ux -> -> # *U &U _pcf857x_pin_mask_arr `ui `ux `ui -> _pin `ui `E721 ]
+"609
+[; ;pcf857x_driver.c: 609:             break;
+[e $U 89  ]
+"610
+[; ;pcf857x_driver.c: 610:         }
+}
+"612
+[; ;pcf857x_driver.c: 612:         case PCF8574_VARIANT:
+[e :U 97 ]
+"613
+[; ;pcf857x_driver.c: 613:         {
+{
+"614
+[; ;pcf857x_driver.c: 614:             if(pin > PCF857X_GPIO_PIN_7){
+[e $ ! > -> _pin `ui -> . `E703 7 `ui 98  ]
+{
+"616
+[; ;pcf857x_driver.c: 616:                 a_pcf857x_print_error_msg(pHandle, "to read pin, invalid gpio");
+[e ( _a_pcf857x_print_error_msg (2 , _pHandle :s 19C ]
+"617
+[; ;pcf857x_driver.c: 617:                 return 4;
+[e ) -> -> 4 `i `uc ]
+[e $UE 84  ]
+"618
+[; ;pcf857x_driver.c: 618:             }
+}
+[e :U 98 ]
+"620
+[; ;pcf857x_driver.c: 620:             err = a_pcf857x_i2c_read(pHandle, ((void*)0), (uint8_t *)status, 1);
+[e = _err ( _a_pcf857x_i2c_read (4 , , , _pHandle -> -> -> 0 `i `*v `us &U _status -> -> 1 `i `uc ]
+"621
+[; ;pcf857x_driver.c: 621:             if(err)
+[e $ ! != -> _err `i -> 0 `i 99  ]
+"622
+[; ;pcf857x_driver.c: 622:             {
+{
+"623
+[; ;pcf857x_driver.c: 623:                 a_pcf857x_print_error_msg(pHandle, "read port register");
+[e ( _a_pcf857x_print_error_msg (2 , _pHandle :s 20C ]
+"624
+[; ;pcf857x_driver.c: 624:                 return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 84  ]
+"625
+[; ;pcf857x_driver.c: 625:             }
+}
+[e :U 99 ]
+"627
+[; ;pcf857x_driver.c: 627:             formated_data = status[0];
+[e = _formated_data -> *U + &U _status * -> -> -> 0 `i `ui `ux -> -> # *U &U _status `ui `ux `us ]
+"628
+[; ;pcf857x_driver.c: 628:             *logic_level = (pcf857x_port_logic_level_t)((formated_data & pcf857x_pin_mask_arr[pin]) >> pin);
+[e = *U _logic_level -> >> & -> _formated_data `ui -> *U + &U _pcf857x_pin_mask_arr * -> _pin `ux -> -> # *U &U _pcf857x_pin_mask_arr `ui `ux `ui -> _pin `ui `E721 ]
+"630
+[; ;pcf857x_driver.c: 630:             break;
+[e $U 89  ]
+"631
+[; ;pcf857x_driver.c: 631:         }
+}
+"633
+[; ;pcf857x_driver.c: 633:         default:
+[e :U 100 ]
+"634
+[; ;pcf857x_driver.c: 634:             return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 84  ]
+"635
+[; ;pcf857x_driver.c: 635:         break;
+[e $U 89  ]
+"637
+[; ;pcf857x_driver.c: 637:     }
+}
+[e $U 89  ]
+[e :U 90 ]
+[e [\ -> . *U _pHandle 9 `i , $ . `E682 2 91
+ , $ . `E682 1 94
+ , $ . `E682 0 97
+ 100 ]
+[e :U 89 ]
+"639
+[; ;pcf857x_driver.c: 639:     return 0;
+[e ) -> -> 0 `i `uc ]
+[e $UE 84  ]
+"640
+[; ;pcf857x_driver.c: 640: }
+[e :UE 84 ]
+}
+"653
+[; ;pcf857x_driver.c: 653: uint8_t pcf857x_pin_read_all(pcf857x_handle_t *const pHandle, uint16_t *logic_level)
+[v _pcf857x_pin_read_all `(uc ~T0 @X0 1 ef2`C*S10`*us ]
+"654
+[; ;pcf857x_driver.c: 654: {
+{
+[e :U _pcf857x_pin_read_all ]
+[v F955 `*S10 ~T0 @X0 1 t ]
+"653
+[; ;pcf857x_driver.c: 653: uint8_t pcf857x_pin_read_all(pcf857x_handle_t *const pHandle, uint16_t *logic_level)
+[v _pHandle `C*S10 ~T0 @X0 1 r1 ]
+[v _logic_level `*us ~T0 @X0 1 r2 ]
+"654
+[; ;pcf857x_driver.c: 654: {
+[f ]
+"655
+[; ;pcf857x_driver.c: 655:     uint16_t status[2];
+[v _status `us ~T0 @X0 -> 2 `i a ]
+"656
+[; ;pcf857x_driver.c: 656:     uint16_t formated_data;
+[v _formated_data `us ~T0 @X0 1 a ]
+"658
+[; ;pcf857x_driver.c: 658:     if(pHandle == ((void*)0))
+[e $ ! == _pHandle -> -> -> 0 `i `*v `*S10 102  ]
+"659
+[; ;pcf857x_driver.c: 659:         return 2;
+[e ) -> -> 2 `i `uc ]
+[e $UE 101  ]
+[e :U 102 ]
+"660
+[; ;pcf857x_driver.c: 660:     if(pHandle->inited != 1)
+[e $ ! != -> . *U _pHandle 11 `i -> 1 `i 103  ]
+"661
+[; ;pcf857x_driver.c: 661:         return 3;
+[e ) -> -> 3 `i `uc ]
+[e $UE 101  ]
+[e :U 103 ]
+"663
+[; ;pcf857x_driver.c: 663:     switch(pHandle->device_variant)
+[e $U 105  ]
+"664
+[; ;pcf857x_driver.c: 664:     {
+{
+"666
+[; ;pcf857x_driver.c: 666:         case PCF8575_VARIANT:
+[e :U 106 ]
+"667
+[; ;pcf857x_driver.c: 667:         {
+{
+"668
+[; ;pcf857x_driver.c: 668:             err = a_pcf857x_i2c_read(pHandle, ((void*)0), (uint16_t *)status, 2);
+[e = _err ( _a_pcf857x_i2c_read (4 , , , _pHandle -> -> -> 0 `i `*v `us -> &U _status `*uc -> -> 2 `i `uc ]
+"669
+[; ;pcf857x_driver.c: 669:             if(err)
+[e $ ! != -> _err `i -> 0 `i 107  ]
+"670
+[; ;pcf857x_driver.c: 670:             {
+{
+"671
+[; ;pcf857x_driver.c: 671:                 a_pcf857x_print_error_msg(pHandle, "read port register");
+[e ( _a_pcf857x_print_error_msg (2 , _pHandle :s 21C ]
+"672
+[; ;pcf857x_driver.c: 672:                 return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 101  ]
+"673
+[; ;pcf857x_driver.c: 673:             }
+}
+[e :U 107 ]
+"674
+[; ;pcf857x_driver.c: 674:             formated_data = (status[0] << 8)|(status[1]);
+[e = _formated_data -> | << -> *U + &U _status * -> -> -> 0 `i `ui `ux -> -> # *U &U _status `ui `ux `ui -> 8 `i -> *U + &U _status * -> -> -> 1 `i `ui `ux -> -> # *U &U _status `ui `ux `ui `us ]
+"675
+[; ;pcf857x_driver.c: 675:             *logic_level = formated_data;
+[e = *U _logic_level _formated_data ]
+"676
+[; ;pcf857x_driver.c: 676:             break;
+[e $U 104  ]
+"677
+[; ;pcf857x_driver.c: 677:         }
+}
+"679
+[; ;pcf857x_driver.c: 679:         case PCF8574A_VARIANT:
+[e :U 108 ]
+"680
+[; ;pcf857x_driver.c: 680:         {
+{
+"681
+[; ;pcf857x_driver.c: 681:             err = a_pcf857x_i2c_read(pHandle, ((void*)0), (uint8_t *)status, 1);
+[e = _err ( _a_pcf857x_i2c_read (4 , , , _pHandle -> -> -> 0 `i `*v `us -> &U _status `*uc -> -> 1 `i `uc ]
+"682
+[; ;pcf857x_driver.c: 682:             if(err)
+[e $ ! != -> _err `i -> 0 `i 109  ]
+"683
+[; ;pcf857x_driver.c: 683:             {
+{
+"684
+[; ;pcf857x_driver.c: 684:                 a_pcf857x_print_error_msg(pHandle, "read port register");
+[e ( _a_pcf857x_print_error_msg (2 , _pHandle :s 22C ]
+"685
+[; ;pcf857x_driver.c: 685:                 return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 101  ]
+"686
+[; ;pcf857x_driver.c: 686:             }
+}
+[e :U 109 ]
+"688
+[; ;pcf857x_driver.c: 688:             *logic_level = status[0];
+[e = *U _logic_level *U + &U _status * -> -> -> 0 `i `ui `ux -> -> # *U &U _status `ui `ux ]
+"689
+[; ;pcf857x_driver.c: 689:             break;
+[e $U 104  ]
+"690
+[; ;pcf857x_driver.c: 690:         }
+}
+"692
+[; ;pcf857x_driver.c: 692:         case PCF8574_VARIANT:
+[e :U 110 ]
+"693
+[; ;pcf857x_driver.c: 693:         {
+{
+"694
+[; ;pcf857x_driver.c: 694:             err = a_pcf857x_i2c_read(pHandle, ((void*)0), (uint8_t *)status, 1);
+[e = _err ( _a_pcf857x_i2c_read (4 , , , _pHandle -> -> -> 0 `i `*v `us -> &U _status `*uc -> -> 1 `i `uc ]
+"695
+[; ;pcf857x_driver.c: 695:             if(err)
+[e $ ! != -> _err `i -> 0 `i 111  ]
+"696
+[; ;pcf857x_driver.c: 696:             {
+{
+"697
+[; ;pcf857x_driver.c: 697:                 a_pcf857x_print_error_msg(pHandle, "read port register");
+[e ( _a_pcf857x_print_error_msg (2 , _pHandle :s 23C ]
+"698
+[; ;pcf857x_driver.c: 698:                 return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 101  ]
+"699
+[; ;pcf857x_driver.c: 699:             }
+}
+[e :U 111 ]
+"701
+[; ;pcf857x_driver.c: 701:             *logic_level = status[0];
+[e = *U _logic_level *U + &U _status * -> -> -> 0 `i `ui `ux -> -> # *U &U _status `ui `ux ]
+"702
+[; ;pcf857x_driver.c: 702:             break;
+[e $U 104  ]
+"703
+[; ;pcf857x_driver.c: 703:         }
+}
+"705
+[; ;pcf857x_driver.c: 705:         default:
+[e :U 112 ]
+"706
+[; ;pcf857x_driver.c: 706:             return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 101  ]
+"707
+[; ;pcf857x_driver.c: 707:         break;
+[e $U 104  ]
+"709
+[; ;pcf857x_driver.c: 709:     }
+}
+[e $U 104  ]
+[e :U 105 ]
+[e [\ -> . *U _pHandle 9 `i , $ . `E682 2 106
+ , $ . `E682 1 108
+ , $ . `E682 0 110
+ 112 ]
+[e :U 104 ]
+"711
+[; ;pcf857x_driver.c: 711:     return 0;
+[e ) -> -> 0 `i `uc ]
+[e $UE 101  ]
+"712
+[; ;pcf857x_driver.c: 712: }
+[e :UE 101 ]
+}
+"727
+[; ;pcf857x_driver.c: 727: uint8_t pcf857x_set_reg(pcf857x_handle_t *const pHandle, uint8_t u8Reg, uint8_t *buf, size_t u8Len)
+[v _pcf857x_set_reg `(uc ~T0 @X0 1 ef4`C*S10`uc`*uc`ui ]
+"728
+[; ;pcf857x_driver.c: 728: {
+{
+[e :U _pcf857x_set_reg ]
+[v F962 `*S10 ~T0 @X0 1 t ]
+"727
+[; ;pcf857x_driver.c: 727: uint8_t pcf857x_set_reg(pcf857x_handle_t *const pHandle, uint8_t u8Reg, uint8_t *buf, size_t u8Len)
+[v _pHandle `C*S10 ~T0 @X0 1 r1 ]
+[v _u8Reg `uc ~T0 @X0 1 r2 ]
+[v _buf `*uc ~T0 @X0 1 r3 ]
+[v _u8Len `ui ~T0 @X0 1 r4 ]
+"728
+[; ;pcf857x_driver.c: 728: {
+[f ]
+"730
+[; ;pcf857x_driver.c: 730:     if(pHandle == ((void*)0))
+[e $ ! == _pHandle -> -> -> 0 `i `*v `*S10 114  ]
+"731
+[; ;pcf857x_driver.c: 731:         return 2;
+[e ) -> -> 2 `i `uc ]
+[e $UE 113  ]
+[e :U 114 ]
+"732
+[; ;pcf857x_driver.c: 732:     if(pHandle->inited != 1)
+[e $ ! != -> . *U _pHandle 11 `i -> 1 `i 115  ]
+"733
+[; ;pcf857x_driver.c: 733:         return 3;
+[e ) -> -> 3 `i `uc ]
+[e $UE 113  ]
+[e :U 115 ]
+"735
+[; ;pcf857x_driver.c: 735:     err = a_pcf857x_i2c_write(pHandle, u8Reg, (uint8_t *)buf, u8Len);
+[e = _err ( _a_pcf857x_i2c_write (4 , , , _pHandle _u8Reg _buf -> _u8Len `uc ]
+"736
+[; ;pcf857x_driver.c: 736:     if(err)
+[e $ ! != -> _err `i -> 0 `i 116  ]
+"737
+[; ;pcf857x_driver.c: 737:     {
+{
+"738
+[; ;pcf857x_driver.c: 738:         return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 113  ]
+"739
+[; ;pcf857x_driver.c: 739:     }
+}
+[e :U 116 ]
+"741
+[; ;pcf857x_driver.c: 741:     return 0;
+[e ) -> -> 0 `i `uc ]
+[e $UE 113  ]
+"742
+[; ;pcf857x_driver.c: 742: }
+[e :UE 113 ]
+}
+"757
+[; ;pcf857x_driver.c: 757: uint8_t pcf857x_get_reg(pcf857x_handle_t *const pHandle, uint8_t u8Reg, uint8_t *buf, size_t u8Len)
+[v _pcf857x_get_reg `(uc ~T0 @X0 1 ef4`C*S10`uc`*uc`ui ]
+"758
+[; ;pcf857x_driver.c: 758: {
+{
+[e :U _pcf857x_get_reg ]
+[v F969 `*S10 ~T0 @X0 1 t ]
+"757
+[; ;pcf857x_driver.c: 757: uint8_t pcf857x_get_reg(pcf857x_handle_t *const pHandle, uint8_t u8Reg, uint8_t *buf, size_t u8Len)
+[v _pHandle `C*S10 ~T0 @X0 1 r1 ]
+[v _u8Reg `uc ~T0 @X0 1 r2 ]
+[v _buf `*uc ~T0 @X0 1 r3 ]
+[v _u8Len `ui ~T0 @X0 1 r4 ]
+"758
+[; ;pcf857x_driver.c: 758: {
+[f ]
+"760
+[; ;pcf857x_driver.c: 760:     if(pHandle == ((void*)0))
+[e $ ! == _pHandle -> -> -> 0 `i `*v `*S10 118  ]
+"761
+[; ;pcf857x_driver.c: 761:         return 2;
+[e ) -> -> 2 `i `uc ]
+[e $UE 117  ]
+[e :U 118 ]
+"762
+[; ;pcf857x_driver.c: 762:     if(pHandle->inited != 1)
+[e $ ! != -> . *U _pHandle 11 `i -> 1 `i 119  ]
+"763
+[; ;pcf857x_driver.c: 763:         return 3;
+[e ) -> -> 3 `i `uc ]
+[e $UE 117  ]
+[e :U 119 ]
+"765
+[; ;pcf857x_driver.c: 765:     err = a_pcf857x_i2c_read(pHandle, u8Reg, (uint8_t *)buf, u8Len);
+[e = _err ( _a_pcf857x_i2c_read (4 , , , _pHandle -> _u8Reg `us _buf -> _u8Len `uc ]
+"766
+[; ;pcf857x_driver.c: 766:     if(err)
+[e $ ! != -> _err `i -> 0 `i 120  ]
+"767
+[; ;pcf857x_driver.c: 767:     {
+{
+"768
+[; ;pcf857x_driver.c: 768:         return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 117  ]
+"769
+[; ;pcf857x_driver.c: 769:     }
+}
+[e :U 120 ]
+"771
+[; ;pcf857x_driver.c: 771:     return 0;
+[e ) -> -> 0 `i `uc ]
+[e $UE 117  ]
+"772
+[; ;pcf857x_driver.c: 772: }
+[e :UE 117 ]
+}
+"782
+[; ;pcf857x_driver.c: 782: uint8_t pcf857x_info(pcf857x_handle_t *const pHandle)
+[v _pcf857x_info `(uc ~T0 @X0 1 ef1`C*S10 ]
+"783
+[; ;pcf857x_driver.c: 783: {
+{
+[e :U _pcf857x_info ]
+[v F976 `*S10 ~T0 @X0 1 t ]
+"782
+[; ;pcf857x_driver.c: 782: uint8_t pcf857x_info(pcf857x_handle_t *const pHandle)
+[v _pHandle `C*S10 ~T0 @X0 1 r1 ]
+"783
+[; ;pcf857x_driver.c: 783: {
+[f ]
+"784
+[; ;pcf857x_driver.c: 784:     strncpy(pHandle->info.chip_name, "PCF857X", 25);
+[e ( _strncpy (3 , , &U . . *U _pHandle 7 0 :s 24C -> -> 25 `i `ui ]
+"785
+[; ;pcf857x_driver.c: 785:     strncpy(pHandle->info.interface, "I2C", 8);
+[e ( _strncpy (3 , , &U . . *U _pHandle 7 2 :s 25C -> -> 8 `i `ui ]
+"786
+[; ;pcf857x_driver.c: 786:     strncpy(pHandle->info.manufacturer_name, "NXP", 25);
+[e ( _strncpy (3 , , &U . . *U _pHandle 7 1 :s 26C -> -> 25 `i `ui ]
+"787
+[; ;pcf857x_driver.c: 787:     pHandle->info.supply_voltage_max_v = 6.0f;
+[e = . . *U _pHandle 7 4 -> .6.0 `f ]
+"788
+[; ;pcf857x_driver.c: 788:     pHandle->info.supply_voltage_min_v = 2.5f;
+[e = . . *U _pHandle 7 3 -> .2.5 `f ]
+"789
+[; ;pcf857x_driver.c: 789:     pHandle->info.max_current_ma = 100;
+[e = . . *U _pHandle 7 5 -> -> 100 `i `f ]
+"790
+[; ;pcf857x_driver.c: 790:     pHandle->info.temperature_max = 85.0f;
+[e = . . *U _pHandle 7 7 -> .85.0 `f ]
+"791
+[; ;pcf857x_driver.c: 791:     pHandle->info.temperature_min = -40.0f;
+[e = . . *U _pHandle 7 6 -U -> .40.0 `f ]
+"792
+[; ;pcf857x_driver.c: 792:     pHandle->info.flash_size_min = 32;
+[e = . . *U _pHandle 7 8 -> -> 32 `i `uc ]
+"793
+[; ;pcf857x_driver.c: 793:     pHandle->info.ram_size_min = 2;
+[e = . . *U _pHandle 7 9 -> -> 2 `i `uc ]
+"794
+[; ;pcf857x_driver.c: 794:     pHandle->info.driver_version = 1000;
+[e = . . *U _pHandle 7 10 -> -> 1000 `i `f ]
+"796
+[; ;pcf857x_driver.c: 796:     return 0;
+[e ) -> -> 0 `i `uc ]
+[e $UE 121  ]
+"797
+[; ;pcf857x_driver.c: 797: }
+[e :UE 121 ]
+}
+[a 7C 119 114 105 116 101 32 112 111 114 116 32 114 101 103 105 115 116 101 114 0 ]
+[a 8C 119 114 105 116 101 32 112 111 114 116 32 114 101 103 105 115 116 101 114 0 ]
+[a 11C 119 114 105 116 101 32 112 111 114 116 32 114 101 103 105 115 116 101 114 0 ]
+[a 14C 119 114 105 116 101 32 112 111 114 116 32 114 101 103 105 115 116 101 114 0 ]
+[a 6C 114 101 97 100 32 112 111 114 116 32 114 101 103 105 115 116 101 114 0 ]
+[a 10C 114 101 97 100 32 112 111 114 116 32 114 101 103 105 115 116 101 114 0 ]
+[a 13C 114 101 97 100 32 112 111 114 116 32 114 101 103 105 115 116 101 114 0 ]
+[a 16C 114 101 97 100 32 112 111 114 116 32 114 101 103 105 115 116 101 114 0 ]
+[a 18C 114 101 97 100 32 112 111 114 116 32 114 101 103 105 115 116 101 114 0 ]
+[a 20C 114 101 97 100 32 112 111 114 116 32 114 101 103 105 115 116 101 114 0 ]
+[a 21C 114 101 97 100 32 112 111 114 116 32 114 101 103 105 115 116 101 114 0 ]
+[a 22C 114 101 97 100 32 112 111 114 116 32 114 101 103 105 115 116 101 114 0 ]
+[a 23C 114 101 97 100 32 112 111 114 116 32 114 101 103 105 115 116 101 114 0 ]
+[a 12C 116 111 32 119 114 105 116 101 32 112 105 110 44 32 105 110 118 97 108 105 100 32 103 112 105 111 0 ]
+[a 17C 116 111 32 114 101 97 100 32 112 105 110 44 32 105 110 118 97 108 105 100 32 103 112 105 111 0 ]
+[a 19C 116 111 32 114 101 97 100 32 112 105 110 44 32 105 110 118 97 108 105 100 32 103 112 105 111 0 ]
+[a 9C 116 111 32 119 114 105 116 101 44 32 105 110 118 97 108 105 100 32 103 112 105 111 32 112 105 110 0 ]
+[a 5C 115 101 116 32 118 97 114 105 97 110 116 44 32 105 110 118 97 108 105 100 0 ]
+[a 15C 119 114 105 116 101 32 112 111 114 116 32 98 101 102 111 114 101 32 114 101 97 100 0 ]
+[a 4C 100 101 45 105 110 105 116 105 97 108 105 122 101 32 105 50 99 0 ]
+[a 24C 80 67 70 56 53 55 88 0 ]
+[a 26C 78 88 80 0 ]
+[a 25C 73 50 67 0 ]
+[a 2C 80 67 70 56 53 55 88 58 32 105 50 99 32 105 110 105 116 105 97 108 105 122 101 32 105 115 32 110 117 108 108 10 0 ]
+[a 3C 80 67 70 56 53 55 88 58 32 105 50 99 32 105 110 105 116 105 97 108 105 122 101 32 102 97 105 108 101 100 10 0 ]
+[a 1C 80 67 70 56 53 55 88 58 32 102 97 105 108 101 100 32 116 111 32 37 115 46 13 10 0 ]

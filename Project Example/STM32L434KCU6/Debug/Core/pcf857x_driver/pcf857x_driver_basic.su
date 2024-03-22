@@ -1,0 +1,10 @@
+../Core/pcf857x_driver/pcf857x_driver_basic.c:40:9:pcf857x_basic_initialize	24	static
+../Core/pcf857x_driver/pcf857x_driver_basic.c:89:9:pcf857x_basic_get_variant	8	static
+../Core/pcf857x_driver/pcf857x_driver_basic.c:103:9:pcf857x_basic_get_addr	8	static
+../Core/pcf857x_driver/pcf857x_driver_basic.c:118:9:pcf857x_basic_gpio_write	8	static
+../Core/pcf857x_driver/pcf857x_driver_basic.c:133:9:pcf857x_basic_gpio_write_all	8	static
+../Core/pcf857x_driver/pcf857x_driver_basic.c:145:9:pcf857x_basic_gpio_read	24	static
+../Core/pcf857x_driver/pcf857x_driver_basic.c:165:10:pcf857x_basic_gpio_read_all	16	static
+../Core/pcf857x_driver/pcf857x_driver_basic.c:183:9:pcf857x_basic_gpio_toggle	8	static
+../Core/pcf857x_driver/pcf857x_driver_basic.c:198:9:pcf857x_basic_write_register	8	static
+../Core/pcf857x_driver/pcf857x_driver_basic.c:214:9:pcf857x_basic_read_reg	8	static
