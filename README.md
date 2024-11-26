@@ -41,7 +41,6 @@ The Library masters PCF857x is the full-function driver of the SHT4x sensors ser
   - [STM32L432 (STM32CubeIDE)](https://github.com/LibraryMasters/pcf857x/tree/master/Project%20Example/STM32L434KCU6)
   - [PIC24FJ128GA705 (MPLAB X IDE)](https://github.com/LibraryMasters/pcf857x/tree/master/Project%20Example/PIC24FJ128GA705/pcf857x_io_expander_PIC24F.X)
   - [SAMD21G18 (Atmel studio 7)](https://github.com/LibraryMasters/pcf857x/tree/master/Project%20Example/ATSAMD21G18A/pcf857x_io_expander_SAMD21)
-  - [RP2040 Pi Pico (VScode)](https://github.com/LibraryMasters/mcp794xx/tree/master/Project%20Example/RP2040%20Pi%20Pico/mcp794xx_rtc_RP2040)
   ### Usage
   #### example basic
 
@@ -265,7 +264,7 @@ uint8_t pcf857x_interface_i2c_write(uint8_t u8Addr, uint16_t u16Reg, uint8_t *pB
   [datasheet](https://github.com/LibraryMasters/pcf857x/blob/master/Document/Datasheet/PCF8574_PCF8574A.pdf)
   
   ### Contribute
-   1. Clone repo and create a new branch: ```https://github.com/LibraryMasters/mcp794xx_PR.git```
+   1. Clone repo and create a new branch: ```https://github.com/LibraryMasters/pcf857x_PR```
    2. Make changes and test
    3. Submit a Pull Request with a comprehensive description of changes
   ### License
